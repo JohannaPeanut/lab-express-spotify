@@ -1,10 +1,11 @@
 
 {{#each data}}
-<div>
-<p>{{ this.name }}</p>
-<img src="{{ this.images.0.url }}" alt="">
-
-<a href="/">View ALbums</a>
-</div>
+    <div>
+    <p>{{ this.name }}</p>
+        {{#if images.length}}
+            <img src="{{ this.images.0.url }}" alt="">
+        {{/if}}
+    <a href="/albums/{{ id }}">View Albums</a>
+    </div>
 {{/each}}
 
